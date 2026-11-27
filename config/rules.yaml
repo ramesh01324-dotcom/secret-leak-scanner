@@ -1,0 +1,35 @@
+rules:
+  - id: aws-access-key
+    description: "AWS Access Key ID"
+    regex: "\\b((?:AKIA|ABIA|ACCA|ASIA)[0-9A-Z]{16})\\b"
+    severity: critical
+    entropy_threshold: 3.0
+
+  - id: github-pat
+    description: "GitHub Personal Access Token"
+    regex: "\\b(ghp_[a-zA-Z0-9]{36}|github_pat_[a-zA-Z0-9_]{82})\\b"
+    severity: critical
+    entropy_threshold: 3.5
+
+  - id: generic-secret-assignment
+    description: "Generic High-Entropy API Key or Secret"
+    regex: "(?i)(?:api_key|apikey|secret|token|password|passwd|pwd)\\s*[:=]\\s*[\"\x27]([a-zA-Z0-9_\\-/+=]{16,})[\"\x27]"
+    severity: high
+    entropy_threshold: 3.8
+
+  - id: private-key-header
+    description: "Private RSA/EC/OpenSSH Key"
+    regex: "-----BEGIN (?:RSA |EC |OPENSSH |DSA )?PRIVATE KEY-----"
+    severity: critical
+    entropy_threshold: 0.0
+
+allowlist:
+  paths:
+    - "tests/"
+    - "venv/"
+    - ".git/"
+  dummy_patterns:
+    - "EXAMPLE"
+    - "DUMMY"
+    - "changeme"
+    - "your_api_key_here"

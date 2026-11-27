@@ -1,0 +1,5 @@
+id,fingerprint,rule_id,description,severity,target_path,file_path,line_number,commit_sha,masked_secret,entropy,status,first_seen,last_seen
+12,3815ffeb0dc505b7,generic-secret-assignment,Generic High-Entropy API Key or Secret,high,/home/ramesh/secret-leak-scanner/demo_leak_repo,app_config.py,4,working-tree,ghp_...mN6p,5.01,open,2026-11-27T12:40:53.267561+00:00,2026-11-27T12:40:53.267561+00:00
+9,b57676f4c415f90a,generic-secret-assignment,Generic High-Entropy API Key or Secret,high,/home/ramesh/secret-leak-scanner/demo_leak_repo,main.tf,3,working-tree,P9xK...jB6c,4.58,open,2026-11-27T12:36:15.644261+00:00,2026-11-27T12:40:53.267561+00:00
+2,4f3c835301e9dfcc,generic-secret-assignment,Generic High-Entropy API Key or Secret,high,/home/ramesh/secret-leak-scanner/demo_leak_repo,app_config.py,2,working-tree,x9K2...3jH5,4.64,open,2026-11-27T12:25:38.081694+00:00,2026-11-27T12:40:53.267561+00:00
+1,eb24c3aac89a5451,aws-access-key,AWS Access Key ID,critical,/home/ramesh/secret-leak-scanner/demo_leak_repo,app_config.py,1,working-tree,AKIA...1W6Z,4.22,open,2026-11-27T12:25:38.081694+00:00,2026-11-27T12:40:53.267561+00:00

@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+*.pyc
+scanner.db
+demo_leak_repo/
+safe_test_repo/
+.env
